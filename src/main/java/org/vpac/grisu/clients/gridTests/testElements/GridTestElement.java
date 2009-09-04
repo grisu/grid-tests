@@ -1,19 +1,19 @@
-package org.vpac.grisu.client.gridTests.testElements;
+package org.vpac.grisu.clients.gridTests.testElements;
 
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
-import org.vpac.grisu.client.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.client.gridTests.GridTestInfo;
-import org.vpac.grisu.client.gridTests.GridTestStage;
-import org.vpac.grisu.client.gridTests.GridTestStageStatus;
-import org.vpac.grisu.client.gridTests.Utils;
+import org.vpac.grisu.clients.gridTests.GridTestInfo;
+import org.vpac.grisu.clients.gridTests.GridTestStage;
+import org.vpac.grisu.clients.gridTests.GridTestStageStatus;
+import org.vpac.grisu.clients.gridTests.Utils;
 import org.vpac.grisu.control.JobConstants;
 import org.vpac.grisu.control.ServiceInterface;
 import org.vpac.grisu.control.exceptions.JobPropertiesException;
 import org.vpac.grisu.control.exceptions.JobSubmissionException;
+import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
 import org.vpac.grisu.frontend.model.job.JobObject;
 import org.vpac.grisu.frontend.model.job.JobStatusChangeListener;
 

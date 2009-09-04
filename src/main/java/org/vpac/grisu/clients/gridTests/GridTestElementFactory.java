@@ -1,9 +1,9 @@
-package org.vpac.grisu.client.gridTests;
+package org.vpac.grisu.clients.gridTests;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import org.vpac.grisu.client.gridTests.testElements.GridTestElement;
+import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
 
 public class GridTestElementFactory {
 	

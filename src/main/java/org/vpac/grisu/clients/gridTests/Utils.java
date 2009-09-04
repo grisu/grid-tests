@@ -1,4 +1,4 @@
-package org.vpac.grisu.client.gridTests;
+package org.vpac.grisu.clients.gridTests;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

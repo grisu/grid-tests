@@ -1,4 +1,4 @@
-package org.vpac.grisu.client.gridTests;
+package org.vpac.grisu.clients.gridTests;
 
 public enum GridTestStageStatus {
 	

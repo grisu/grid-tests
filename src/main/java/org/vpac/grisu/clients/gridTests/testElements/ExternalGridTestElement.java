@@ -1,4 +1,4 @@
-package org.vpac.grisu.client.gridTests.testElements;
+package org.vpac.grisu.clients.gridTests.testElements;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,9 +6,9 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-import org.vpac.grisu.client.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.client.gridTests.GridExternalTestInfoImpl;
+import org.vpac.grisu.clients.gridTests.GridExternalTestInfoImpl;
 import org.vpac.grisu.control.ServiceInterface;
+import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
 import org.vpac.grisu.frontend.control.login.LoginParams;
 import org.vpac.grisu.frontend.control.login.ServiceInterfaceFactory;
 import org.vpac.grisu.frontend.model.job.JobObject;

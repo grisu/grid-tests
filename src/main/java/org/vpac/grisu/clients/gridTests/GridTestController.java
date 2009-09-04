@@ -1,4 +1,4 @@
-package org.vpac.grisu.client.gridTests;
+package org.vpac.grisu.clients.gridTests;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -17,11 +17,11 @@ import java.util.concurrent.TimeUnit;
 import jline.ConsoleReader;
 
 import org.apache.commons.lang.StringUtils;
-import org.vpac.grisu.client.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.client.gridTests.testElements.GridTestElement;
+import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
 import org.vpac.grisu.control.JobConstants;
 import org.vpac.grisu.control.ServiceInterface;
 import org.vpac.grisu.control.exceptions.ServiceInterfaceException;
+import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
 import org.vpac.grisu.frontend.control.login.LoginHelpers;
 import org.vpac.grisu.frontend.control.login.LoginManager;
 import org.vpac.grisu.frontend.control.login.LoginParams;

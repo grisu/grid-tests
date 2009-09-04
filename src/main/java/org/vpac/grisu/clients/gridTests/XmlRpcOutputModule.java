@@ -1,4 +1,4 @@
-package org.vpac.grisu.client.gridTests;
+package org.vpac.grisu.clients.gridTests;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,7 +7,7 @@ import java.util.Date;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
-import org.vpac.grisu.client.gridTests.testElements.GridTestElement;
+import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
 
 import au.org.arcs.jcommons.utils.SubmissionLocationHelpers;
 
