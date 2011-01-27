@@ -17,7 +17,7 @@ In order to build the backend from the git sources, you need:
 Checking out sourcecode
 -------------------------------------
 
- `git clone git://github.com/grisu/enunciate-backend.git`
+ `git clone git://github.com/grisu/grid-tests.git`
 
 Building Grisu using Maven
 ------------------------------------------
