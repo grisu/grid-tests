@@ -1,14 +1,60 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>grisu.frontend</groupId>
 	<artifactId>grid-tests</artifactId>
+	<name>grid-tests</name>
 	<version>0.3-beta5-SNAPSHOT</version>
 
 	<properties>
 		<grisu.dependency.version>0.3-beta5-SNAPSHOT</grisu.dependency.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>ARCS</id>
+			<url>http://code.arcs.org.au/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>ARCS Snapshots</id>
+			<url>http://code.arcs.org.au/nexus/content/groups/public-snapshots</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>ARCS plugin</id>
+			<url>http://code.arcs.org.au/nexus/content/groups/public</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>ARCS plugin Snapshots</id>
+			<url>http://code.arcs.org.au/nexus/content/groups/public-snapshots</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>arcs.release</id>
+			<name>ARCS Release Repository</name>
+			<url>http://code.arcs.org.au/nexus/content/repositories/releases</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>arcs.snapshot</id>
+			<name>ARCS SNAPSHOT Repository</name>
+			<url>http://code.arcs.org.au/nexus/content/repositories/snapshots</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 
@@ -44,6 +90,21 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
+	<description>This package contains a commandline grid client which can run grid-wide application specific end-to-end tests. For every application you can setup a test-template (of which there is a repository here: [grid-tests-templates[(https://github.com/grisu/grid-tests-templates)).</description>
+	<url>https://github.com/grisu/grid-tests</url>
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/grisu/grid-tests/issues</url>
+	</issueManagement>
+	<scm>
+		<connection>scm:git:git://github.com/grisu/grid-tests.git</connection>
+		<developerConnection>scm:git:git@github.com:grisu/grid-tests.git</developerConnection>
+		<url>https://github.com/grisu/grid-tests/tree/master</url>
+	</scm>
+	<organization>
+		<name>Grisu open source project</name>
+		<url>https://github.com/grisu</url>
+	</organization>
 	<build>
 		<plugins>
 			<plugin>
