@@ -1,17 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<artifactId>grisu-clients</artifactId>
-		<groupId>org.vpac.grisu</groupId>
-		<version>0.3-beta4-SNAPSHOT</version>
-	</parent>
+
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>grisu.frontend</groupId>
 	<artifactId>grid-tests</artifactId>
+	<version>0.3-beta5-SNAPSHOT</version>
+
+	<properties>
+		<grisu.dependency.version>0.3-beta5-SNAPSHOT</grisu.dependency.version>
+	</properties>
 
 
 	<dependencies>
 
 		<dependency>
-			<groupId>org.vpac.grisu</groupId>
+			<groupId>grisu.frontend</groupId>
 			<artifactId>grisu-client</artifactId>
 			<version>${grisu.dependency.version}</version>
 			<scope>compile</scope>
@@ -36,13 +38,7 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>au.org.arcs.auth</groupId>
-			<artifactId>arcs-gsi</artifactId>
-			<version>1.2</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.vpac.grisu</groupId>
+			<groupId>grisu.backend</groupId>
 			<artifactId>grisu-core</artifactId>
 			<version>${grisu.dependency.version}</version>
 			<scope>compile</scope>
