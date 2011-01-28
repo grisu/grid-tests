@@ -1,14 +1,15 @@
-package org.vpac.grisu.clients.gridTests.testElements;
+package grisu.frontend.gridTests.testElements;
+
+import grisu.control.exceptions.NoSuchJobException;
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.gridTests.GridTestInfo;
+import grisu.frontend.model.job.JobObject;
+import grisu.model.dto.GridFile;
 
 import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.vpac.grisu.clients.gridTests.GridTestInfo;
-import org.vpac.grisu.control.exceptions.NoSuchJobException;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.frontend.model.job.JobObject;
-import org.vpac.grisu.model.dto.GridFile;
 
 import au.org.arcs.jcommons.constants.Constants;
 

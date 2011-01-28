@@ -1,6 +1,6 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
 
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
+import grisu.frontend.gridTests.testElements.GridTestElement;
 
 public interface OutputModule {
 

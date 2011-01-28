@@ -1,4 +1,13 @@
-package org.vpac.grisu.clients.gridTests.testElements;
+package grisu.frontend.gridTests.testElements;
+
+import grisu.control.ServiceInterface;
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.control.login.LoginParams;
+import grisu.frontend.control.login.ServiceInterfaceFactory;
+import grisu.frontend.gridTests.GridExternalTestInfoImpl;
+import grisu.frontend.model.job.JobObject;
+import grisu.model.GrisuRegistryManager;
+import grisu.utils.SeveralXMLHelpers;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,14 +15,6 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-import org.vpac.grisu.clients.gridTests.GridExternalTestInfoImpl;
-import org.vpac.grisu.control.ServiceInterface;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.frontend.control.login.LoginParams;
-import org.vpac.grisu.frontend.control.login.ServiceInterfaceFactory;
-import org.vpac.grisu.frontend.model.job.JobObject;
-import org.vpac.grisu.model.GrisuRegistryManager;
-import org.vpac.grisu.utils.SeveralXMLHelpers;
 import org.w3c.dom.Document;
 
 public class ExternalGridTestElement extends GridTestElement {

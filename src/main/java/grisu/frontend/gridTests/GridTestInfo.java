@@ -1,10 +1,11 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.gridTests.testElements.GridTestElement;
 
 import java.io.File;
 import java.util.List;
 
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
 
 public interface GridTestInfo {
 

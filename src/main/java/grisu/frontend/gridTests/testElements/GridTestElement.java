@@ -1,4 +1,16 @@
-package org.vpac.grisu.clients.gridTests.testElements;
+package grisu.frontend.gridTests.testElements;
+
+import grisu.control.JobConstants;
+import grisu.control.ServiceInterface;
+import grisu.control.exceptions.JobPropertiesException;
+import grisu.control.exceptions.JobSubmissionException;
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.gridTests.GridTestInfo;
+import grisu.frontend.gridTests.GridTestStage;
+import grisu.frontend.gridTests.GridTestStageStatus;
+import grisu.frontend.gridTests.Utils;
+import grisu.frontend.model.events.JobStatusEvent;
+import grisu.frontend.model.job.JobObject;
 
 import java.util.Date;
 import java.util.LinkedList;
@@ -7,17 +19,6 @@ import java.util.UUID;
 
 import org.bushe.swing.event.annotation.AnnotationProcessor;
 import org.bushe.swing.event.annotation.EventSubscriber;
-import org.vpac.grisu.clients.gridTests.GridTestInfo;
-import org.vpac.grisu.clients.gridTests.GridTestStage;
-import org.vpac.grisu.clients.gridTests.GridTestStageStatus;
-import org.vpac.grisu.clients.gridTests.Utils;
-import org.vpac.grisu.control.JobConstants;
-import org.vpac.grisu.control.ServiceInterface;
-import org.vpac.grisu.control.exceptions.JobPropertiesException;
-import org.vpac.grisu.control.exceptions.JobSubmissionException;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.frontend.model.events.JobStatusEvent;
-import org.vpac.grisu.frontend.model.job.JobObject;
 
 public abstract class GridTestElement implements Comparable<GridTestElement> {
 

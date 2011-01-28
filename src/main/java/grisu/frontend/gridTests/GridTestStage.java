@@ -1,4 +1,4 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
 
 import java.util.Date;
 import java.util.SortedMap;

@@ -1,4 +1,6 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.frontend.gridTests.testElements.GridTestElement;
 
 import java.util.Collection;
 import java.util.Map;
@@ -6,7 +8,6 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
 
 public class OutputModuleHelpers {
 

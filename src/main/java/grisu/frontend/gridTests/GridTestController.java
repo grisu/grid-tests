@@ -1,4 +1,16 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.control.JobConstants;
+import grisu.control.ServiceInterface;
+import grisu.control.exceptions.ServiceInterfaceException;
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.control.login.LoginException;
+import grisu.frontend.control.login.LoginManager;
+import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.model.GrisuRegistry;
+import grisu.model.GrisuRegistryManager;
+import grisu.settings.Environment;
+import grisu.utils.GrisuPluginFilenameFilter;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,17 +31,6 @@ import org.apache.log4j.FileAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
-import org.vpac.grisu.control.JobConstants;
-import org.vpac.grisu.control.ServiceInterface;
-import org.vpac.grisu.control.exceptions.ServiceInterfaceException;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.frontend.control.login.LoginException;
-import org.vpac.grisu.frontend.control.login.LoginManager;
-import org.vpac.grisu.model.GrisuRegistry;
-import org.vpac.grisu.model.GrisuRegistryManager;
-import org.vpac.grisu.settings.Environment;
-import org.vpac.grisu.utils.GrisuPluginFilenameFilter;
 
 import au.org.arcs.jcommons.constants.ArcsEnvironment;
 import au.org.arcs.jcommons.dependencies.ClasspathHacker;

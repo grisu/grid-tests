@@ -1,4 +1,4 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
 
 import java.net.URL;
 import java.util.Date;

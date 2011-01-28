@@ -1,4 +1,11 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.gridTests.testElements.ExternalGridTestElement;
+import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.model.GrisuRegistryManager;
+import grisu.model.info.ApplicationInformation;
+import grisu.utils.SeveralXMLHelpers;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,12 +16,6 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
-import org.vpac.grisu.clients.gridTests.testElements.ExternalGridTestElement;
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.model.GrisuRegistryManager;
-import org.vpac.grisu.model.info.ApplicationInformation;
-import org.vpac.grisu.utils.SeveralXMLHelpers;
 import org.w3c.dom.Document;
 
 import au.org.arcs.jcommons.constants.Constants;
@@ -177,7 +178,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.vpac.grisu.client.gridTests.GridTestInfo#createGridTestElement(java
+	 * grisu.client.gridTests.GridTestInfo#createGridTestElement(java
 	 * .lang.String, java.lang.String)
 	 */
 	public GridTestElement createGridTestElement(String version,
@@ -193,7 +194,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.vpac.grisu.client.gridTests.GridTestInfo#generateAllGridTestElements
+	 * grisu.client.gridTests.GridTestInfo#generateAllGridTestElements
 	 * ()
 	 */
 	public final List<GridTestElement> generateAllGridTestElements()
@@ -261,7 +262,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getApplicationName()
+	 * @see grisu.client.gridTests.GridTestInfo#getApplicationName()
 	 */
 	public String getApplicationName() {
 		return applicationName;
@@ -270,7 +271,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getCommand()
+	 * @see grisu.client.gridTests.GridTestInfo#getCommand()
 	 */
 	public String getCommand() {
 		return command;
@@ -279,7 +280,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getController()
+	 * @see grisu.client.gridTests.GridTestInfo#getController()
 	 */
 	public GridTestController getController() {
 		return this.controller;
@@ -288,7 +289,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getDescription()
+	 * @see grisu.client.gridTests.GridTestInfo#getDescription()
 	 */
 	public String getDescription() {
 		return description;
@@ -301,7 +302,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getInputFiles()
+	 * @see grisu.client.gridTests.GridTestInfo#getInputFiles()
 	 */
 	public List<String> getInputFiles() {
 		return inputFiles;
@@ -310,7 +311,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getJsdlDoc()
+	 * @see grisu.client.gridTests.GridTestInfo#getJsdlDoc()
 	 */
 	public Document getJsdlDoc() {
 		return jsdlDoc;
@@ -319,7 +320,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getJsdlFile()
+	 * @see grisu.client.gridTests.GridTestInfo#getJsdlFile()
 	 */
 	public File getJsdlFile() {
 		return jsdlFile;
@@ -328,7 +329,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getOutputFiles()
+	 * @see grisu.client.gridTests.GridTestInfo#getOutputFiles()
 	 */
 	public List<String> getOutputFiles() {
 		return outputFiles;
@@ -337,7 +338,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getTestDir()
+	 * @see grisu.client.gridTests.GridTestInfo#getTestDir()
 	 */
 	public File getTestBaseDir() {
 		return testDir;
@@ -345,7 +346,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 
 	// /* (non-Javadoc)
 	// * @see
-	// org.vpac.grisu.client.gridTests.GridTestInfo#getSubmissionLocationsPerVersion()
+	// grisu.client.gridTests.GridTestInfo#getSubmissionLocationsPerVersion()
 	// */
 	// public Map<String, Set<String>> getSubmissionLocationsPerVersion() {
 	// return subLocsPerVersions;
@@ -354,7 +355,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#getTestname()
+	 * @see grisu.client.gridTests.GridTestInfo#getTestname()
 	 */
 	public String getTestname() {
 		return testname;
@@ -363,7 +364,7 @@ public class GridExternalTestInfoImpl implements GridTestInfo {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.vpac.grisu.client.gridTests.GridTestInfo#isUseMds()
+	 * @see grisu.client.gridTests.GridTestInfo#isUseMds()
 	 */
 	public boolean isUseMds() {
 		return useMds;

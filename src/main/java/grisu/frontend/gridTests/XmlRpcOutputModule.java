@@ -1,4 +1,6 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.frontend.gridTests.testElements.GridTestElement;
 
 import java.net.URL;
 import java.util.Date;
@@ -10,7 +12,6 @@ import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
 
 public class XmlRpcOutputModule implements OutputModule {
 

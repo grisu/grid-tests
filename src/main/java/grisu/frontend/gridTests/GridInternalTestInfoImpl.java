@@ -1,4 +1,9 @@
-package org.vpac.grisu.clients.gridTests;
+package grisu.frontend.gridTests;
+
+import grisu.frontend.control.clientexceptions.MdsInformationException;
+import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.model.GrisuRegistryManager;
+import grisu.model.info.ApplicationInformation;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -8,10 +13,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
-import org.vpac.grisu.clients.gridTests.testElements.GridTestElement;
-import org.vpac.grisu.frontend.control.clientexceptions.MdsInformationException;
-import org.vpac.grisu.model.GrisuRegistryManager;
-import org.vpac.grisu.model.info.ApplicationInformation;
 
 import au.org.arcs.jcommons.constants.Constants;
 
@@ -62,7 +63,7 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 		this.fqans = fqans;
 
 		testClass = Class
-				.forName("org.vpac.grisu.clients.gridTests.testElements."
+				.forName("grisu.clients.gridTests.testElements."
 						+ testname + "GridTestElement");
 
 		try {

@@ -131,7 +131,7 @@
 
 								<index>true</index>
 								<manifest>
-									<mainClass>org.vpac.grisu.clients.gridTests.GridTestController</mainClass>
+									<mainClass>grisu.clients.gridTests.GridTestController</mainClass>
 								</manifest>
 								<manifestEntries>
 									<Class-Path>bcprov.jar bcprov-jdk15-143.jar local-backend.jar</Class-Path>
