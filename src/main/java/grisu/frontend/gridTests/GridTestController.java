@@ -7,6 +7,10 @@ import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.control.login.LoginException;
 import grisu.frontend.control.login.LoginManager;
 import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.jcommons.constants.GridEnvironment;
+import grisu.jcommons.dependencies.ClasspathHacker;
+import grisu.jcommons.dependencies.Dependency;
+import grisu.jcommons.dependencies.DependencyManager;
 import grisu.model.GrisuRegistry;
 import grisu.model.GrisuRegistryManager;
 import grisu.settings.Environment;
@@ -32,10 +36,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
 
-import au.org.arcs.jcommons.constants.ArcsEnvironment;
-import au.org.arcs.jcommons.dependencies.ClasspathHacker;
-import au.org.arcs.jcommons.dependencies.Dependency;
-import au.org.arcs.jcommons.dependencies.DependencyManager;
 
 public class GridTestController {
 
@@ -133,7 +133,7 @@ public class GridTestController {
 		dependencies.put(Dependency.BOUNCYCASTLE, "jdk15-143");
 
 		DependencyManager.addDependencies(dependencies,
-				ArcsEnvironment.getArcsCommonJavaLibDirectory());
+				GridEnvironment.getGridCommonJavaLibDirectory());
 
 		ClasspathHacker.initFolder(Environment.getGrisuPluginDirectory(),
 				new GrisuPluginFilenameFilter());

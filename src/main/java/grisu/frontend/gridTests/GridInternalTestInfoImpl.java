@@ -2,6 +2,7 @@ package grisu.frontend.gridTests;
 
 import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.jcommons.constants.Constants;
 import grisu.model.GrisuRegistryManager;
 import grisu.model.info.ApplicationInformation;
 
@@ -14,7 +15,6 @@ import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 
-import au.org.arcs.jcommons.constants.Constants;
 
 public class GridInternalTestInfoImpl implements GridTestInfo {
 

@@ -4,9 +4,9 @@ import grisu.control.JobConstants;
 import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.gridTests.GridTestInfo;
 import grisu.frontend.model.job.JobObject;
+import grisu.jcommons.constants.Constants;
 
 
-import au.org.arcs.jcommons.constants.Constants;
 
 public class JavaGridTestElement extends GridTestElement {
 

@@ -4,14 +4,14 @@ import grisu.control.exceptions.NoSuchJobException;
 import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.gridTests.GridTestInfo;
 import grisu.frontend.model.job.JobObject;
+import grisu.jcommons.constants.Constants;
+import grisu.jcommons.constants.JobSubmissionProperty;
 import grisu.model.FileManager;
 import grisu.model.GrisuRegistryManager;
 
 import java.io.File;
 
 
-import au.org.arcs.jcommons.constants.Constants;
-import au.org.arcs.jcommons.constants.JobSubmissionProperty;
 
 public class SimpleCatJobGridTestElement extends GridTestElement {
 

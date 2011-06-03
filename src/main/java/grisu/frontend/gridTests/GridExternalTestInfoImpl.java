@@ -3,6 +3,8 @@ package grisu.frontend.gridTests;
 import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.gridTests.testElements.ExternalGridTestElement;
 import grisu.frontend.gridTests.testElements.GridTestElement;
+import grisu.jcommons.constants.Constants;
+import grisu.jcommons.utils.JsdlHelpers;
 import grisu.model.GrisuRegistryManager;
 import grisu.model.info.ApplicationInformation;
 import grisu.utils.SeveralXMLHelpers;
@@ -18,8 +20,6 @@ import java.util.Set;
 import org.apache.commons.lang.StringUtils;
 import org.w3c.dom.Document;
 
-import au.org.arcs.jcommons.constants.Constants;
-import au.org.arcs.jcommons.utils.JsdlHelpers;
 
 public class GridExternalTestInfoImpl implements GridTestInfo {
 

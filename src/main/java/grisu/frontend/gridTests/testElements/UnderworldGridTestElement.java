@@ -4,6 +4,7 @@ import grisu.control.exceptions.NoSuchJobException;
 import grisu.frontend.control.clientexceptions.MdsInformationException;
 import grisu.frontend.gridTests.GridTestInfo;
 import grisu.frontend.model.job.JobObject;
+import grisu.jcommons.constants.Constants;
 import grisu.model.dto.GridFile;
 
 import java.io.File;
@@ -11,7 +12,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-import au.org.arcs.jcommons.constants.Constants;
 
 public class UnderworldGridTestElement extends GridTestElement {
 
