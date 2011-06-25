@@ -1,3 +1,0 @@
-[submodule "src/main/resources/tests"]
-	path = src/main/resources/tests
-	url = git@github.com:grisu/grid-tests-templates.git
