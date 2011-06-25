@@ -80,7 +80,7 @@ public class GridTestCommandlineOptions {
 				"d",
 				"duplicate the test job and submit it to the same submissionlocation x times (default: 1)");
 		final Option help = createOption("help", "h", "this help text");
-		final Option siUrl = createOptionWithArg("url", "u",
+		final Option siUrl = createOptionWithArg("backend", "b",
 				"the serviceInterface url to connect to. default: Local");
 
 		options = new Options();
@@ -221,8 +221,8 @@ public class GridTestCommandlineOptions {
 			fqans = line.getOptionValue("vos").split(",");
 		}
 
-		if (line.hasOption("url")) {
-			url = line.getOptionValue("url");
+		if (line.hasOption("backend")) {
+			url = line.getOptionValue("backend");
 		}
 
 		if (line.hasOption("output")) {
@@ -255,7 +255,7 @@ public class GridTestCommandlineOptions {
 						.getOptionValue("simultaneousThreads"));
 			} catch (final Exception e) {
 				System.err
-						.println("SimultaneousThreads value is not an integer.");
+				.println("SimultaneousThreads value is not an integer.");
 				formatter.printHelp("grisu-grid-test", this.options);
 				System.exit(1);
 			}
@@ -266,7 +266,7 @@ public class GridTestCommandlineOptions {
 						.getOptionValue("sameSubmissionLocation"));
 			} catch (final Exception e) {
 				System.err
-						.println("sameSubmissionLocation value is not an integer.");
+				.println("sameSubmissionLocation value is not an integer.");
 				formatter.printHelp("grisu-grid-test", this.options);
 				System.exit(1);
 			}

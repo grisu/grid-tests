@@ -25,7 +25,7 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 		if (testnames.length == 0) {
 			testnames = new String[] { "Java", "SimpleCatJob", "Underworld",
-					"UnixCommands" };
+			"UnixCommands" };
 		}
 
 		for (final String testname : testnames) {
@@ -57,13 +57,13 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 	public GridInternalTestInfoImpl(String testname,
 			GridTestController controller, String[] fqans)
-			throws ClassNotFoundException {
+					throws ClassNotFoundException {
 		this.controller = controller;
 		this.testname = testname;
 		this.fqans = fqans;
 
 		testClass = Class
-				.forName("grisu.clients.gridTests.testElements."
+.forName("grisu.frontend.gridTests.testElements."
 						+ testname + "GridTestElement");
 
 		try {
@@ -84,10 +84,10 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 		} catch (final Exception e) {
 			System.err
-					.println("Could not create internal test "
-							+ testname
-							+ " because the static getApplicationName method is not implemented: "
-							+ e.getLocalizedMessage());
+			.println("Could not create internal test "
+					+ testname
+					+ " because the static getApplicationName method is not implemented: "
+					+ e.getLocalizedMessage());
 			System.err.println("Exiting...");
 			System.exit(1);
 		}
@@ -98,10 +98,10 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 		} catch (final Exception e) {
 			System.err
-					.println("Could not create internal test "
-							+ testname
-							+ " because the static getTestDescription method is not implemented: "
-							+ e.getLocalizedMessage());
+			.println("Could not create internal test "
+					+ testname
+					+ " because the static getTestDescription method is not implemented: "
+					+ e.getLocalizedMessage());
 			System.err.println("Exiting...");
 			System.exit(1);
 		}
@@ -112,10 +112,10 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 		} catch (final Exception e) {
 			System.err
-					.println("Could not create internal test "
-							+ testname
-							+ " because the static getFixedVersion method is not implemented: "
-							+ e.getLocalizedMessage());
+			.println("Could not create internal test "
+					+ testname
+					+ " because the static getFixedVersion method is not implemented: "
+					+ e.getLocalizedMessage());
 			System.err.println("Exiting...");
 			System.exit(1);
 		}
@@ -124,7 +124,7 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 	public GridTestElement createGridTestElement(String version,
 			String submissionLocation, String fqan)
-			throws MdsInformationException {
+					throws MdsInformationException {
 
 		Constructor testConstructor = null;
 		try {
@@ -159,14 +159,14 @@ public class GridInternalTestInfoImpl implements GridTestInfo {
 
 		final ApplicationInformation appInfo = GrisuRegistryManager.getDefault(
 				controller.getServiceInterface()).getApplicationInformation(
-				applicationName);
+						applicationName);
 
 		for (final String fqan : fqans) {
 
 			if (useMds) {
 				if (StringUtils.isNotBlank(versionName)
 						&& !Constants.NO_VERSION_INDICATOR_STRING
-								.equals(versionName)) {
+						.equals(versionName)) {
 					// means only one version
 					final Set<String> subLocs = appInfo
 							.getAvailableSubmissionLocationsForVersionAndFqan(

@@ -24,10 +24,9 @@ Building Grisu using Maven
 
 To build one of the above modules, cd into the module root directory of the module to build and execute: 
 
-    cd enunciate-backend
+    cd grid-tests
     mvn clean install
 
-This will build a war file that can be deployed into a container and also a deb file that can be installed on a Debian based machine.
 
 Running the grid-tests client
 ---------------------------------------------
@@ -75,7 +74,7 @@ To see a list of available commandline options:
      -t,--tests <tests>                                     the names of the
                                                             tests to run (seperated with a comma). If not specified, all tests will
                                                             run.
-     -u,--url <url>                                         the
+     -b,--backend <url>                                     the
                                                             serviceInterface url to connect to. default: Local
      -v,--vos <vos>                                         the vos to use,
                                                             seperated with a comma
