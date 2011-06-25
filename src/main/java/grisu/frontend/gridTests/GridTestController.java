@@ -45,7 +45,7 @@ public class GridTestController {
 	 * @throws MdsInformationException
 	 */
 	public static void main(String[] args) throws ServiceInterfaceException,
-			MdsInformationException {
+	MdsInformationException {
 
 		String name = GridTestController.class.getName();
 		name = name.replace('.', '/') + ".class";
@@ -114,9 +114,11 @@ public class GridTestController {
 		// logging stuff
 		final SimpleLayout layout = new SimpleLayout();
 		try {
+			File dir = new File(this.grisu_base_directory);
+			dir.mkdirs();
 			final FileAppender fa = new FileAppender(layout,
 					this.grisu_base_directory + File.separator
-							+ "grisu-tests.debug", false);
+					+ "grisu-tests.debug", false);
 			final Logger logger = Logger.getRootLogger();
 			logger.addAppender(fa);
 			logger.setLevel(Level.INFO);
@@ -231,10 +233,10 @@ public class GridTestController {
 					final String password = module.substring(
 							module.indexOf(":") + 1, module.indexOf("]"));
 					outputModules
-							.add(new XmlRpcOutputModule(username, password));
+					.add(new XmlRpcOutputModule(username, password));
 				} catch (final Exception e) {
 					System.err
-							.println("Can't parse rpc config option. You need to specify it like: rpc[username:password]");
+					.println("Can't parse rpc config option. You need to specify it like: rpc[username:password]");
 					System.exit(1);
 				}
 			}
@@ -272,8 +274,8 @@ public class GridTestController {
 			@Override
 			public void run() {
 				System.out
-						.println("Checking job success for job submitted to: "
-								+ gte.getSubmissionLocation());
+				.println("Checking job success for job submitted to: "
+						+ gte.getSubmissionLocation());
 				gte.checkWhetherJobDidWhatItWasSupposedToDo();
 				if (!gte.failed()) {
 					System.out.println("Job submitted to "
@@ -285,9 +287,9 @@ public class GridTestController {
 				gte.killAndClean();
 				if (!gte.failed()) {
 					System.out
-							.println("Killing and cleaning of job submitted to "
-									+ gte.getSubmissionLocation()
-									+ " was successful.");
+					.println("Killing and cleaning of job submitted to "
+							+ gte.getSubmissionLocation()
+							+ " was successful.");
 				}
 
 				gte.finishTest();
@@ -317,9 +319,9 @@ public class GridTestController {
 				gte.submitJob();
 				if (gte.failed()) {
 					System.out
-							.println("Submission to "
-									+ gte.getSubmissionLocation()
-									+ " finished: Failed");
+					.println("Submission to "
+							+ gte.getSubmissionLocation()
+							+ " finished: Failed");
 				} else {
 					System.out.println("Submission to "
 							+ gte.getSubmissionLocation()
@@ -367,7 +369,7 @@ public class GridTestController {
 				}
 
 				System.out
-						.println("Adding grid test element: " + el.toString());
+				.println("Adding grid test element: " + el.toString());
 
 				gridTestElements.put(el.getTestId(), el);
 
