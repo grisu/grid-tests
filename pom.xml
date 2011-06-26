@@ -87,6 +87,24 @@
 			<artifactId>grisu-client</artifactId>
 			<version>${grisu.dependency.version}</version>
 			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>grisu.backend</groupId>
+			<artifactId>grisu-core</artifactId>
+			<version>${grisu.dependency.version}</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>jline</groupId>
@@ -112,6 +130,27 @@
 			<artifactId>grisu-core</artifactId>
 			<version>${grisu.dependency.version}</version>
 			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.madgag</groupId>
+			<artifactId>org.eclipse.jgit.pgm</artifactId>
+			<version>0.11.99.4-UNOFFICIAL-ROBERTO-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.madgag</groupId>
+			<artifactId>org.eclipse.jgit.test</artifactId>
+			<version>0.11.99.4-UNOFFICIAL-ROBERTO-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
 		</dependency>
 	</dependencies>
 	<description>This package contains a commandline grid client which can run grid-wide application specific end-to-end tests. For every application you can setup a test-template (of which there is a repository here: [grid-tests-templates[(https://github.com/grisu/grid-tests-templates)).</description>

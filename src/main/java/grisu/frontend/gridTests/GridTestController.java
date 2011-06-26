@@ -35,6 +35,11 @@ import org.apache.log4j.FileAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
+import org.eclipse.jgit.api.CloneCommand;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.PullCommand;
+import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 
 
 public class GridTestController {
@@ -62,7 +67,73 @@ public class GridTestController {
 			baseDir = null;
 		}
 
+		if (StringUtils.isBlank(baseDir)) {
+			baseDir = System.getProperty("user.home") + File.separator
+					+ "grisu-grid-tests";
+		}
+
 		System.out.println("Using directory: " + baseDir);
+
+		File baseDirFile = new File(baseDir);
+
+		if ( baseDirFile.exists() && (!baseDirFile.canWrite()||baseDirFile.isFile())) {
+			System.err.println("Base directory " + baseDir
+					+ " is file or can't write to it...");
+			System.exit(1);
+		}
+
+		File testsDir = new File(baseDirFile, "tests");
+
+		if (testsDir.exists() && (testsDir.isFile() || !testsDir.canWrite())) {
+			System.err.println("Tests directory " + baseDir
+					+ " is file or can't write to it...");
+			System.exit(1);
+		}
+
+		boolean testsDirExists = false;
+		if (!testsDir.exists()) {
+			System.out.println("External tests directory ("
+					+ testsDir.toString()
+					+ ") doesn't exist. Cloning it from github...");
+			try {
+				CloneCommand c = Git.cloneRepository();
+				c.setDirectory(testsDir);
+				c.setBranch("master");
+
+				c.setURI("git://github.com/grisu/grid-tests-templates.git");
+				c.call();
+				testsDirExists = true;
+				System.out.println("Cloning successful.");
+			} catch (Exception e) {
+				System.err.println("Could not clone tests git repostitory: "
+						+ e.getLocalizedMessage());
+				System.err
+				.println("Please put it in place manually or you'll only be able to use inbuild tests.");
+			}
+		} else {
+			testsDirExists = true;
+		}
+
+		if (testsDirExists) {
+			try {
+				System.out
+						.println("Pulling latest changes for external tests from github...");
+				FileRepositoryBuilder builder = new FileRepositoryBuilder();
+				Repository repository = builder
+						.setGitDir(new File(testsDir, ".git")).readEnvironment()
+						.findGitDir()
+						.build();
+
+				Git git = new Git(repository);
+
+				PullCommand pc = git.pull();
+				pc.call();
+			} catch (Exception e) {
+				System.err
+				.println("Could not pull latest tests from git repository: "
+						+ e.getLocalizedMessage());
+			}
+		}
 
 		final GridTestController gtc = new GridTestController(args, baseDir);
 

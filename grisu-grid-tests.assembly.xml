@@ -12,7 +12,7 @@
 			<useProjectArtifact>true</useProjectArtifact>
 			<outputDirectory>/</outputDirectory>
 			<includes>
-				<include>grisu:grid-tests</include>
+				<include>grisu.frontend:grid-tests</include>
 			</includes>
 			<excludes>
 				<exclude>junit:junit</exclude>
@@ -31,10 +31,6 @@
 
 	<!-- probably unnecessary -->
 	<files>
-		<file>
-			<source>src/main/resources/log4j.properties</source>
-			<outputDirectory>/</outputDirectory>
-		</file>
 		<file>
 			<source>src/main/resources/gluev12r2-ext-class-map.properties</source>
 			<outputDirectory>/</outputDirectory>
